@@ -21,6 +21,6 @@ const handWithPair = [
 ];
 
 it("returns true if the hand has a pair", () => {
-  expect(pair(handWithPair).toBeTrue());
-  expect(pair(handOnlyWithHighCard).toBeTrue());
+  expect(pair(handWithPair)).toBe(true);
+  expect(pair(handOnlyWithHighCard)).toBe(false);
 })

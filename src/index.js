@@ -15,3 +15,14 @@ export function highCard(hand)
 
     return highestCard;
 }
+
+export function pair(hand) {
+    for(let i = 0; i < hand.length - 1; i++) {
+        for(let j = i + 1; j < hand.length; j++) {
+            if (hand[i].value === hand[j].value) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
