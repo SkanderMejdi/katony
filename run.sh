@@ -14,7 +14,7 @@ function revert() {
 }
 
 function tests() {
-    jest
+    npm t -- --coverage
 }
 
 MESSAGE="$2"

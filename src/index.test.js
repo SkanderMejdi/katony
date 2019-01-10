@@ -9,5 +9,5 @@ const hand1 = [
 ];
 
 it("returns the highest card of a hand", () => {
-  expect(highCard(hand1)).toBe({ value: 13, color: D });
+  expect(highCard(hand1)).toEqual({ value: 13, color: D });
 });
