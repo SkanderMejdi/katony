@@ -87,3 +87,16 @@ it("returns true if the hand has a flush", () => {
   expect(flush(handWithStraight)).toBe(false);
   expect(flush(handWithFlush)).toBe(true);
 });
+
+const handWithFullHouse = [
+  { value: 2, color: H },
+  { value: 3, color: D },
+  { value: 2, color: H },
+  { value: 3, color: C },
+  { value: 3, color: H }
+];
+
+it("returns true if the hand has a full house", () => {
+  expect(flush(handWithStraight)).toBe(false);
+  expect(flush(handWithFullHouse)).toBe(true);
+});
