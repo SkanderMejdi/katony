@@ -63,3 +63,5 @@ export function flush(hand) {
         && hand[0].color === hand[3].color
         && hand[0].color === hand[4].color;
 }
+
+export const fullHouse = hand => doublePair(hand) && threeOfAKind(hand);
