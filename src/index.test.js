@@ -9,7 +9,8 @@ import {
   threeOfAKind,
   straight,
   flush,
-  fullHouse
+  fullHouse,
+  fourOfAKind,
 } from "./index";
 
 const handOnlyWithHighCard = [
@@ -101,3 +102,16 @@ it("returns true if the hand has a full house", () => {
   expect(fullHouse(handWithStraight)).toBe(false);
   expect(fullHouse(handWithFullHouse)).toBe(true);
 });
+
+const handWithFourOfAKind = [
+  { value: 3, color: H },
+  { value: 3, color: D },
+  { value: 2, color: D },
+  { value: 3, color: S },
+  { value: 3, color: H }
+];
+
+it('returns true if the has a for of a kind', () => {
+  expect(fourOfAKind(handWithFullHouse)).toBe(false);
+  expect(fourOfAKind(handWithFourOfAKind)).toBe(true);
+})
