@@ -14,7 +14,7 @@ function revert() {
 }
 
 function tests() {
-    npm test
+    jest
 }
 
 MESSAGE="$2"
