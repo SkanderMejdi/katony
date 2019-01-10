@@ -52,3 +52,8 @@ export function threeOfAKind(hand) {
     }
     return false;
 }
+
+export function straight(hand) {
+    let values = hand.map(card => card.value).sort();
+    return values[4] - values[0] === 4;
+}
