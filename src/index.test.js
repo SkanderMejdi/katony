@@ -1,4 +1,15 @@
-import { D, C, H, S, highCard, pair, doublePair, threeOfAKind, straight } from "./index";
+import {
+  D,
+  C,
+  H,
+  S,
+  highCard,
+  pair,
+  doublePair,
+  threeOfAKind,
+  straight,
+  flush
+} from "./index";
 
 const handOnlyWithHighCard = [
   { value: 2, color: H },
@@ -62,4 +73,17 @@ const handWithStraight = [
 it("returns true if the hand has a straight", () => {
   expect(straight(handWithThreeOfAKind)).toBe(false);
   expect(straight(handWithStraight)).toBe(true);
+});
+
+const handWithStraight = [
+  { value: 2, color: H },
+  { value: 10, color: H },
+  { value: 5, color: H },
+  { value: 12, color: H },
+  { value: 6, color: H }
+];
+
+it("returns true if the hand has a flush", () => {
+  expect(flush(handWithStraight)).toBe(false);
+  expect(flush(handWithFlush)).toBe(true);
 });
