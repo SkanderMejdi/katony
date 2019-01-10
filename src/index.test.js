@@ -60,6 +60,6 @@ const handWithStraight = [
 ];
 
 it("returns true if the hand has a straight", () => {
-  expect(threeOfAKind(handWithThreeOfAKind)).toBe(false);
-  expect(threeOfAKind(handWithStraight)).toBe(true);
+  expect(straight(handWithThreeOfAKind)).toBe(false);
+  expect(straight(handWithStraight)).toBe(true);
 });
