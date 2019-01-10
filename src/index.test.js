@@ -8,7 +8,8 @@ import {
   doublePair,
   threeOfAKind,
   straight,
-  flush
+  flush,
+  fullHouse
 } from "./index";
 
 const handOnlyWithHighCard = [
@@ -91,12 +92,12 @@ it("returns true if the hand has a flush", () => {
 const handWithFullHouse = [
   { value: 2, color: H },
   { value: 3, color: D },
-  { value: 2, color: H },
+  { value: 2, color: D },
   { value: 3, color: C },
   { value: 3, color: H }
 ];
 
 it("returns true if the hand has a full house", () => {
-  expect(flush(handWithStraight)).toBe(false);
-  expect(flush(handWithFullHouse)).toBe(true);
+  expect(fullHouse(handWithStraight)).toBe(false);
+  expect(fullHouse(handWithFullHouse)).toBe(true);
 });
