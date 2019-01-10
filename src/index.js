@@ -39,3 +39,16 @@ export function doublePair(hand) {
     }
     return false;
 }
+
+export function threeOfAKind(hand) {
+
+    for(let i = 0; i < hand.length - 1; i++) {
+        let countCard = 1;
+        for(let j = i + 1; j < hand.length; j++) {
+            if (hand[i].value === hand[j].value && ++countCard === 3) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
