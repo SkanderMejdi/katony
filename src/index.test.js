@@ -1,4 +1,4 @@
-import { D, C, H, S } from "./index";
+import { D, C, H, S, highCard } from "./index";
 
 const hand1 = [
   { value: 2, color: H },
@@ -9,5 +9,5 @@ const hand1 = [
 ];
 
 it("returns the highest card of a hand", () => {
-  expect(1).toBe(1);
+  expect(highCard(hand1)).toBe({ value: 13, color: D });
 });
