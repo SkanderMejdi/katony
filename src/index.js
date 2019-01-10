@@ -77,3 +77,5 @@ export function fourOfAKind(hand) {
         return true;
     }
 }
+
+export const straightFlush = hand => straight(hand) && flush(hand);
