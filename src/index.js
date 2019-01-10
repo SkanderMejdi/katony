@@ -65,3 +65,15 @@ export function flush(hand) {
 }
 
 export const fullHouse = hand => doublePair(hand) && threeOfAKind(hand);
+
+export function fourOfAKind(hand) {
+    for (let i = 0; i < hand.length - 1; i++) {
+        let countDiffCard = 0;
+        for (let j = i + 1; j < hand.length; j++) {
+            if (hand[i].value !== hand[j].value && ++countDiffCard === 2) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
