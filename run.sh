@@ -14,7 +14,7 @@ function revert() {
 }
 
 function tests() {
-    mvn clean install
+    npm test
 }
 
 MESSAGE="$2"
