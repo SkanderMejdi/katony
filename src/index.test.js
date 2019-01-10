@@ -54,7 +54,7 @@ const handWithThreeOfAKind = [
   { value: 2, color: H },
   { value: 14, color: D },
   { value: 2, color: S },
-  { value: 14, color: C },
+  { value: 1, color: C },
   { value: 2, color: D }
 ];
 
