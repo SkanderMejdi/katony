@@ -75,7 +75,7 @@ it("returns true if the hand has a straight", () => {
   expect(straight(handWithStraight)).toBe(true);
 });
 
-const handWithStraight = [
+const handWithFlush = [
   { value: 2, color: H },
   { value: 10, color: H },
   { value: 5, color: H },
