@@ -11,7 +11,8 @@ import {
   flush,
   fullHouse,
   fourOfAKind,
-  straightFlush
+  straightFlush,
+  compare,
 } from "./index";
 
 const handOnlyWithHighCard = [
@@ -128,4 +129,8 @@ const handWithStraightFlush = [
 it('returns true if the has a straight flush', () => {
   expect(straightFlush(handWithStraight)).toBe(false);
   expect(straightFlush(handWithStraightFlush)).toBe(true);
+})
+
+it('compares two hands to give the winner', () => {
+  expect(compare(handOnlyWithHighCard, handWithFlush)).toBe(handWithFlush);
 })
